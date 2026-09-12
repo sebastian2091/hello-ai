@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Personal</title>
+    <style>
+        /* Estilos generales y variables de color */
+        :root {
+            --bg-color: #0b0f19;        /* Negro/Oscuro de fondo */
+            --card-bg: #161f30;        /* Negro/Azul oscuro para los contenedores */
+            --accent-color: #38bdf8;   /* Azul claro brillante */
+            --accent-hover: #0284c7;   /* Azul claro para efectos */
+            --text-color: #ffffff;     /* Texto blanco */
+            --text-secondary: #94a3b8; /* Texto secundario gris claro */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Contenedor principal (Tarjeta) */
+        .container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px 30px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            text-align: center;
+        }
+
+        /* Encabezado */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        /* Sección de me gusta */
+        .likes-section {
+            margin-top: 20px;
+        }
+
+        .likes-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .likes-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .likes-list li {
+            background-color: rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--accent-color);
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: var(--text-color);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        /* Efectos visuales */
+        .likes-list li:hover {
+            transform: translateY(-2px);
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        /* Diseño adaptable para celulares (Responsive) */
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .subtitle {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Hola, soy <span>[tu nombre]</span></h1>
+            <p class="subtitle">Estudiante de Tecnología en Desarrollo de Software en la UTP (Pereira)</p>
+        </header>
+
+        <section class="likes-section">
+            <h2>Lo que me gusta</h2>
+            <ul class="likes-list">
+                <li>Voleibol</li>
+                <li>Pasear</li>
+                <li>Estudiar</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>
